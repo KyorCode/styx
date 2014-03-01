@@ -1,0 +1,27 @@
+{
+  "name": "styxJs",
+  "version": "0.0.0",
+  "description": "Inversion of Controle container in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyorCode/styxJs.git"
+  },
+  "keywords": [
+    "IoC",
+    "Inversion",
+    "of",
+    "Controle",
+    "dependency",
+    "injection"
+  ],
+  "author": "Tom Ceuppens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KyorCode/styxJs/issues"
+  },
+  "homepage": "https://github.com/KyorCode/styxJs"
+}
