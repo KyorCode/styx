@@ -9,6 +9,6 @@ describe("Styx", function () {
     });
 
     it('can be constructed', function () {
-        expect(this.container).to.be.exist;
+        expect(this.container).to.exist;
     });
 });
