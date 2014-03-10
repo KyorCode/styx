@@ -1,10 +1,9 @@
-var expect = require('chai').expect;
+var expect = require('must');
 var Container = require('./../lib/container');
 
 describe("Container", function () {
 
     beforeEach(function () {
-        debugger;
         this.container = new Container();
     });
 
