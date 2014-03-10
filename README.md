@@ -2,6 +2,12 @@
 
 Styx is a very simple IoC ( Inversion of Control ) container for Node. Based on the phylosophy of Castle Windsor
 
+## Short term todo's
+
+*need to order these*
+
+1. rewrite requireAll to be an eventemmiter
+
 ## Goals
 
 *need to order these*
