@@ -11,4 +11,8 @@ describe("Styx", function () {
     it('can be constructed', function () {
         expect(this.container).to.exist;
     });
+
+    it('has only the container registered',function(){
+       expect(this.container.get('container')).to.equal(this.container);
+    });
 });
