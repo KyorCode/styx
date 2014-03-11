@@ -16,6 +16,6 @@ describe('requireAll',function(){
 
 
     it('should have required the right file',function(){
-       expect(this.files['test.installer']).to.be.eql({ index: 2, value: 10})
+       expect(this.files['test.installer']).to.be.eql({ index: 2, value: 10});
     });
 });
