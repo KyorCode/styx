@@ -1,17 +1,21 @@
 var expect = require('must');
-var styx = require('./../lib/styx');
+var Styx = require('./../lib/styx');
 
 describe("Styx", function () {
-
-    beforeEach(function () {
-        this.container = styx.create();
-    });
-
     it('can be constructed', function () {
-        expect(this.container).to.exist();
+        var styx = new Styx();
+        var container = styx.create();
+        expect(container).to.exist();
     });
 
-    it('has only the container registered', function () {
-        expect(this.container.get('container')).to.equal(this.container);
+    it('has only the container registered', function (done) {
+        var styx = new Styx();
+
+        styx.on('created',function(){
+            expect(container.resolve('container')).to.equal(container);
+            done();
+        });
+
+        var container = styx.create();
     });
 });

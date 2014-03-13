@@ -4,10 +4,7 @@ Styx is a very simple IoC ( Inversion of Control ) container for Node. Based on 
 
 ## Short term todo's
 
-*need to order these*
-
-1. rewrite requireAll to be an eventemmiter
-2. Split requireAll into require module and getFilesFromDirectory
+0.
 
 ## Goals
 
@@ -25,3 +22,4 @@ Styx is a very simple IoC ( Inversion of Control ) container for Node. Based on 
 9.  Multiple resolvers, array injections
 10. eventemitter container
 
+##

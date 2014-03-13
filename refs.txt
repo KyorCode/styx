@@ -1,7 +1,0 @@
-https://github.com/felixge/node-require-all/blob/master/index.js
-
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-emphasis
-
-http://chaijs.com/api/bdd/
-
-https://github.com/RoyJacobs/intravenous/

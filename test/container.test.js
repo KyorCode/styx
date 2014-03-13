@@ -15,13 +15,13 @@ describe("Container", function () {
 
         it('can not register the same name twice', function () {
             this.container.register('container', {});
-            expect(this.container.get('container')).to.equal(this.container);
+            expect(this.container.resolve('container')).to.equal(this.container);
         });
 
         it('can register the same name twice if isDefault is provided', function () {
             var obj = {};
             this.container.register('container', obj, { isDefault: true});
-            expect(this.container.get('container')).to.equal(obj);
+            expect(this.container.resolve('container')).to.equal(obj);
         });
     });
 });

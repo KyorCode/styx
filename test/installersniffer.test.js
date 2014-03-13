@@ -9,11 +9,11 @@ describe('Installersniffer', function () {
         var installerSniffer = new InstallerSniffer(container,__dirname + '/rFiles');
 
         installerSniffer.on('installed', function () {
-            var installer = container.get('test.installer');
+            var installer = container.resolve('test.installer');
             expect(installer).to.exist();
             done();
         });
 
-        installerSniffer.install();
+        installerSniffer.registerInstallers();
     });
 });
