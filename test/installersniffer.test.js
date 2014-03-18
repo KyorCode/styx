@@ -6,7 +6,7 @@ describe('Installersniffer', function () {
     it('should have registered 1 installer in the container', function (done) {
 
         var container = new Container();
-        var installerSniffer = new InstallerSniffer(container,__dirname + '/rFiles');
+        var installerSniffer = new InstallerSniffer(container,__dirname + '/installers');
 
         installerSniffer.on('installed', function () {
             var installer = container.resolve('test.installer');
