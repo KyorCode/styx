@@ -24,4 +24,21 @@ describe("Container", function () {
             expect(this.container.resolve('container')).to.equal(obj);
         });
     });
+
+    describe("installation",function(){
+
+        it("should have registered 1 installer",function(done){
+
+            var container = new Container();
+
+            container.on('installed',function(){
+                var installer = container.resolve('container.installer');
+                expect(installer).to.exist();
+                done();
+            });
+
+            container.install();
+        });
+
+    });
 });

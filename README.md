@@ -10,7 +10,6 @@ Styx is a very simple IoC ( Inversion of Control ) container for Node. Based on 
 
 *need to order these*
 
-0.  Installers
 1.  Interceptor
 2.  register directory
 3.  register require call to a module
