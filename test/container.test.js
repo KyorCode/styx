@@ -3,14 +3,11 @@ var Container = require('./../lib/container');
 
 describe("Container", function () {
 
-    beforeEach(function () {
-        this.container = new Container();
-    });
-
     describe("registration", function () {
 
-        beforeEach(function(){
-           this.container.register('container',this.container);
+        beforeEach(function () {
+            this.container = new Container();
+            this.container.register('container', this.container);
         });
 
         it('can not register the same name twice', function () {
@@ -25,13 +22,12 @@ describe("Container", function () {
         });
     });
 
-    describe("installation",function(){
+    describe("installation", function () {
 
-        it("should have registered 1 installer",function(done){
-
+        it("should have registered 1 installer", function (done) {
             var container = new Container();
 
-            container.on('installed',function(){
+            container.on('installed', function () {
                 var installer = container.resolve('container.installer');
                 expect(installer).to.exist();
                 done();
@@ -39,6 +35,29 @@ describe("Container", function () {
 
             container.install();
         });
+    });
 
+    describe("resolving", function () {
+
+        beforeEach(function(){
+            this.container = new Container();
+        });
+
+        describe(":one", function () {
+
+            beforeEach(function () {
+                this.subject = { it : 'super'};
+                this.container.register('test.obj',this.subject);
+            });
+
+            it("can resolve a dependency", function () {
+                var obj = this.container.resolve('test.obj');
+                expect(obj).to.equal(this.subject);
+            });
+        });
+
+        describe(":all", function () {
+
+        });
     });
 });
