@@ -58,6 +58,18 @@ describe("Container", function () {
 
         describe(":all", function () {
 
+            beforeEach(function () {
+                this.subject = { it : 'super'};
+                this.container.register('test.obj',this.subject);
+
+                this.subject2 = { it : 'awesome'};
+                this.container.register('test.obj2',this.subject2);
+            });
+
+            it("can resolve multiple dependencies",function(){
+                var result = this.container.resolveAll(/(test.+)$/);
+                expect(result.length).to.equal(2);
+            });
         });
     });
 });
