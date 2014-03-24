@@ -4,7 +4,7 @@ Styx is a very simple IoC ( Inversion of Control ) container for Node. Based on 
 
 ## Short term todo's
 
-0.
+0.Interceptor
 
 ## Goals
 
@@ -18,7 +18,5 @@ Styx is a very simple IoC ( Inversion of Control ) container for Node. Based on 
 6.  Circular dependency detection
 7.  Resolve submodules
 8.  Factories
-9.  Multiple resolvers, array injections
-10. eventemitter container
 
 ##
